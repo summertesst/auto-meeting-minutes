@@ -1,5 +1,7 @@
 # Auto Meeting Minutes
 
+[中文说明](README.zh-CN.md)
+
 Windows utility for capturing Microsoft Teams Live Captions locally, generating
 structured meeting-minute drafts, and browsing a local meeting archive.
 
