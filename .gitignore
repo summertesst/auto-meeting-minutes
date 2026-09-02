@@ -1,0 +1,21 @@
+# Runtime meeting data: never commit recordings, transcripts, minutes, or task exports.
+/output/*
+!/output/.gitkeep
+
+# Generated archive content can contain meeting data.
+/site/data.js
+/site/pages/
+
+# Local state, logs, and Python caches.
+*.log
+*.sqlite
+*.db
+__pycache__/
+*.py[cod]
+.env
+.env.*
+.copilot/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

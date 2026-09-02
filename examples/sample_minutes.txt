@@ -1,0 +1,20 @@
+================================================================================
+  MEETING MINUTES — Semantic Task Confirmed (AI-reviewed)
+================================================================================
+  Meeting : Example weekly project review
+  Date    : 2026-01-15
+  Time    : 10:00 — 10:05
+  Source  : sample_transcript.txt
+
+================================================================================
+  ACTION ITEMS
+================================================================================
+
+  TOPIC - Design Interface
+    [T] Alex Example: Updated interface checklist to be sent; due: 2026-01-16
+
+  Possible (needs human confirmation):
+    [T?] Blair Example: Checklist completion to be confirmed before the next review; due: TBD
+
+  My Tasks:
+    None — no explicit assignment to the configured user.

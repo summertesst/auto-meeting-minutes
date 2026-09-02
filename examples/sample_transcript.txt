@@ -1,0 +1,11 @@
+# Teams Live Caption (UIA) - 2026-01-15 10:00
+# Window: Live Captions | Example weekly project review | Microsoft Teams
+
+[10:01:00]
+Alex Example, Engineering: I will send the updated interface checklist by Friday.
+
+[10:02:00]
+Blair Example, Program: Please confirm the checklist is complete before the next review.
+
+[10:03:00]
+Alex Example, Engineering: The previous test report has already been uploaded.

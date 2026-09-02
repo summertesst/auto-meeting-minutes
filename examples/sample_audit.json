@@ -1,0 +1,35 @@
+{
+  "audit_version": 1,
+  "pass_count": 5,
+  "confirmedTasks": [
+    {
+      "agendaTopic": "Design Interface",
+      "owner": "Alex Example",
+      "task": "Updated interface checklist to be sent",
+      "deadline": "2026-01-16",
+      "confidence": "confirmed",
+      "evidence": "I will send the updated interface checklist by Friday."
+    }
+  ],
+  "possibleTasks": [
+    {
+      "agendaTopic": "Design Interface",
+      "owner": "Blair Example",
+      "task": "Checklist completion to be confirmed before the next review",
+      "deadline": "TBD",
+      "confidence": "possible",
+      "evidence": "Please confirm the checklist is complete before the next review.",
+      "reason": "The exact reviewer is not named."
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "reason": "Status update, not a future action.",
+      "text": "The previous test report has already been uploaded."
+    }
+  ],
+  "myTasks": [],
+  "warnings": [
+    "One possible task needs owner confirmation."
+  ]
+}
