@@ -26,6 +26,21 @@ Windows UI Automation 字幕采集
 
 行动项不通过正则表达式自动猜测；它需要基于完整上下文进行人工或 AI 语义复核。
 
+## 当前自动会议纪要工作流（2026-09）
+
+1. **会中采集**：`scripts\caption_daemon.py` 检测 Teams 字幕窗口并调用 `scripts\capture_core.py`，写入 `output\transcripts\LiveCaption_*.txt`。  
+2. **会后占位纪要**：守护进程调用 `scripts\summary_generator.py` 生成 `output\summaries\MeetingMinutes_*.txt`（初始为 `Auto-Captured` 占位版）。  
+3. **触发语义复核**：写入 `~\.copilot\pmo_trigger.json`（`pending=true`），由 Copilot/skill 进行 7-stage 语义任务确认。  
+4. **任务落盘**：复核后更新 minutes 为 `Semantic Task Confirmed (AI-reviewed)`，并生成同名 `*.audit.json`（5-pass 统计 + confirmed/possible/rejected + evidence）。  
+5. **归档站点**：执行 `python scripts\build_meeting_site.py` 重建 `site\index.html`、`site\data.js`、`site\pages\...`。  
+6. **收尾**：对应 trigger 置 `pending=false`，避免同一会议重复处理。  
+
+### 判定规则（执行口径）
+
+- **正则任务抽取已禁用**：行动项只来自语义复核结果。  
+- **My Tasks 严格收敛**：仅当用户被明确指派且有可交付物时写入。  
+- **审计通过前置条件**：minutes/audit 需明确标注语义复核来源，且不能是 placeholder 空结果。  
+
 ## 环境要求
 
 - Windows 10/11

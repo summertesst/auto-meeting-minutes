@@ -31,6 +31,15 @@ At meeting end, it produces a draft minutes file and refreshes the local archive
 Task extraction is deliberately a human/AI semantic review step, not a regex
 guessing step.
 
+## Current workflow snapshot (2026-09)
+
+1. `scripts\caption_daemon.py` detects Teams captions and starts `scripts\capture_core.py`.
+2. Transcript is written to `output\transcripts\LiveCaption_*.txt`.
+3. After meeting end, `scripts\summary_generator.py` creates a placeholder `MeetingMinutes_*.txt` (`Auto-Captured`).
+4. Semantic task confirmation (7-stage, PMO style) updates minutes to `Semantic Task Confirmed (AI-reviewed)` and writes `*.audit.json`.
+5. `python scripts\build_meeting_site.py` rebuilds the local archive site.
+6. Trigger state is cleared (`pending=false`) to avoid reprocessing.
+
 ## Requirements
 
 - Windows 10/11
